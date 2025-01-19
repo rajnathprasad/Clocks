@@ -1,4 +1,9 @@
+document.addEventListener('DOMContentLoaded', () => {
+runDigital = false;
+runAnalog = true;
+const tik=new Audio("tik.mp3")
 function displayAnalogTime(){
+    // tik.play();
     let date = new Date();
     let hh=date.getHours();
     let mm=date.getMinutes();
@@ -12,16 +17,18 @@ function displayAnalogTime(){
     hr.style.transform = `rotate(${hhRotation}deg)`;
     min.style.transform = `rotate(${mmRotation}deg)`;
     sec.style.transform = `rotate(${ssRotation}deg)`;
+    return;
 }
 function displayDigitalTime(){
+    // tik.play();
     let date = new Date();
     let hh=date.getHours();
     let mm=date.getMinutes();
     let ss=date.getSeconds();
     let digiClock = document.querySelector(".digiClock");
     digiClock.innerText=`${hh}  :  ${mm}  :  ${ss}`;
+    return;
 }
-// displayAnalogTime();
-// displayDigitalTime();
 setInterval(displayAnalogTime,1000);
 setInterval(displayDigitalTime,1000);
+});
