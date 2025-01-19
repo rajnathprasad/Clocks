@@ -21,5 +21,7 @@ function displayDigitalTime(){
     let digiClock = document.querySelector(".digiClock");
     digiClock.innerText=`${hh}  :  ${mm}  :  ${ss}`;
 }
+// displayAnalogTime();
+// displayDigitalTime();
 setInterval(displayAnalogTime,1000);
 setInterval(displayDigitalTime,1000);
